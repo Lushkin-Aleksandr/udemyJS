@@ -20,5 +20,5 @@ let appData = {
 
 let dailyBudget = (appData.money - appData.expenses.answer1) / 30;
 
-alert("Ваш бюджет на день " + dailyBudget + " рублей.");
+alert("Ваш бюджет на один день " + dailyBudget + " рублей.");
 
