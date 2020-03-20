@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     /*Обработчик нажатий на кнопки с длегированием(определяет на 
     какую кнопку произведено нажатие и открывает нужный таб)*/
-    info.addEventListener('click', function(event) {
+    info.addEventListener('click', (event) => {
         let target = event.target;
         if (target && target.classList.contains('info-header-tab')) {
             for (let i = 0; i < tab.length; i++) {
@@ -103,20 +103,20 @@ window.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
     }
 
-    more.addEventListener('click', function() {
+    more.addEventListener('click', () => {
         openModalWindow();
-        this.classList.add('more-splash');
+        more.classList.add('more-splash');
     });
 
     moreTab.forEach(function(item) {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', () => {
             openModalWindow();
         });
     });
     
 
 
-    closeBtn.addEventListener('click', function() {
+    closeBtn.addEventListener('click', () => {
         closeModalWindow();
         more.classList.remove('more-splash');
     });
